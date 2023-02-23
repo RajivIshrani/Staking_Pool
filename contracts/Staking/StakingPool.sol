@@ -7,10 +7,10 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract StakingPool is Ownable, Pausable, ReentrancyGuard {
-    IERC20 public immutable stakingToken; //RJToken
-    IERC20 public immutable rewardToken; //RWDToken
+    IERC20 public immutable stakingToken; //stakingToken
+    IERC20 public immutable rewardToken; //rewardToken
 
-    uint256 public minDuration = 7776000; // 3Months * 24hours * 60min * 60sec
+    uint256 public minDuration = 172800; // 2Days * 24hours * 60min * 60sec
 
     // Annual reward percentage
     uint256 public rewardPercentage = 2000; //20%
